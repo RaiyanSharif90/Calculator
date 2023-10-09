@@ -1,0 +1,20 @@
+name: Hello world workflows
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  hello:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: hello world
+        run: echo "Hello World"
+        shell: bash
+  
